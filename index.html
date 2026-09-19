@@ -2,186 +2,145 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>A DEADLY WAVE OF LOVE - MOD BY KIIRA TAAKO (BLOODDEV)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A DEADLY WAVE OF LOVE - MOD</title>
+    
+    <!-- Nhúng phông chữ DFVN Bagel Fat One từ kho dự án -->
     <style>
-        /* KHAI BÁO PHÔNG CHỮ DFVN BAGEL FAT ONE */
         @font-face {
-            font-family: 'DFVN Bagel Fat One';
-            src: url('DFVN Bagel Fat One.ttf') format('truetype');
+            font-family: 'Bagel Fat One';
+            src: url('DFVN%20Bagel%20Fat%20One.ttf') format('truetype');
         }
 
-        body { 
-            background-color: #120000; 
-            color: #ffffff; 
-            font-family: 'DFVN Bagel Fat One', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            text-align: center; 
+        body {
+            /* Ảnh nền tối màu mờ ảo, load trực tiếp từ file up trên GitHub */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Bagel Fat One', cursive, sans-serif;
+            color: #fff;
+            text-align: center;
             margin: 0;
-            padding: 20px;
-        }
-        header {
-            margin-top: 30px;
-        }
-        .logo {
-            width: 450px; 
-            border-radius: 50%; 
-            border: 3px solid #ff1a75; 
-            box-shadow: 0 0 35px #ff1a75; 
-            transition: transform 0.3s ease;
-        }
-        .logo:hover {
-            transform: scale(1.05);
-        }
-        h1 { 
-            color: #ff1a75; 
-            font-size: 38px;
-            text-shadow: 2px 2px 8px rgba(255, 26, 117, 0.4);
-            margin: 15px 0 5px 0;
-        }
-        .subtitle {
-            font-style: italic;
-            color: #ff99bb;
-            font-size: 18px;
-            margin-bottom: 25px;
-        }
-        .desc-box {
-            background-color: rgba(30, 0, 0, 0.8);
-            border: 1px solid #ff1a75;
-            max-width: 650px;
-            margin: 0 auto 20px auto;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(255, 26, 117, 0.2);
-            line-height: 1.6;
-            color: #ddd;
-            font-size: 16px;
-        }
-        
-        /* PHẦN NHÀ TẠO MOD KÈM MẠNG XÃ HỘI BÊN TRONG */
-        .creator-box {
-            background-color: rgba(45, 0, 15, 0.9);
-            border: 1px dashed #ff4d94;
-            max-width: 650px;
-            margin: 0 auto 25px auto;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(255, 26, 117, 0.3);
+            padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 15px;
+            justify-content: center;
+            min-height: 100vh;
         }
-        .creator-top {
+
+        h1 {
+            font-size: 3rem;
+            color: #ff477e;
+            text-shadow: 3px 3px 0px #000;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #ffb3c6;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 0px #000;
+        }
+
+        .container {
+            background: rgba(30, 10, 20, 0.85);
+            border: 3px solid #ff477e;
+            border-radius: 20px;
+            padding: 30px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0px 0px 20px rgba(255, 71, 126, 0.6);
+            margin-bottom: 20px;
+        }
+
+        .creator-box {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 20px;
-            width: 100%;
+            gap: 15px;
+            margin: 20px 0;
         }
-        .creator-avatar {
+
+        .creator-box img {
             width: 70px;
             height: 70px;
             border-radius: 50%;
-            border: 2px solid #ff4d94;
+            border: 2px solid #ff477e;
             object-fit: cover;
-            box-shadow: 0 0 10px #ff1a75;
-        }
-        .creator-info {
-            text-align: left;
-            color: #ff99bb;
-            font-size: 16px;
-        }
-        .creator-info span {
-            color: #ffffff;
-            font-weight: bold;
-            font-size: 18px;
-            display: block;
-            margin-top: 3px;
         }
 
-        /* MẠNG XÃ HỘI TRONG KHUNG */
         .social-container {
             display: flex;
             justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            width: 100%;
-            border-top: 1px solid rgba(255, 77, 148, 0.3);
-            padding-top: 15px;
-            margin-top: 5px;
+            gap: 15px;
+            margin-top: 20px;
         }
+
         .social-btn {
-            display: inline-block;
-            padding: 8px 18px;
-            color: white;
             text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 10px;
             font-weight: bold;
-            border-radius: 8px;
-            font-size: 15px;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            color: white;
+            transition: 0.2s;
+            box-shadow: 0 4px 0 rgba(0,0,0,0.3);
         }
+
+        .youtube { background-color: #ff0000; }
+        .tiktok { background-color: #000000; border: 1px solid #fff; }
+        .discord { background-color: #5865F2; }
+
         .social-btn:hover {
             transform: translateY(-3px);
         }
-        .youtube { background-color: #ff0000; }
-        .youtube:hover { box-shadow: 0 0 15px #ff0000; }
-
-        .tiktok { background-color: #00f2fe; color: #000; }
-        .tiktok:hover { box-shadow: 0 0 15px #00f2fe; }
-
-        .discord { background-color: #5865F2; }
-        .discord:hover { box-shadow: 0 0 15px #5865F2; }
 
         .download-btn {
             display: inline-block;
-            padding: 14px 30px;
-            background: linear-gradient(45deg, #ff1a75, #ff4d94);
+            background: linear-gradient(135deg, #ff477e, #ff758c);
             color: white;
+            padding: 15px 40px;
+            font-size: 1.5rem;
             text-decoration: none;
-            font-size: 20px;
-            font-weight: bold;
-            border-radius: 30px;
-            box-shadow: 0 0 15px #ff1a75;
-            transition: all 0.3s ease;
-            margin-bottom: 20px;
-        }
-        .download-btn:hover {
-            background: linear-gradient(45deg, #e6005c, #ff1a75);
-            box-shadow: 0 0 25px #ff4d94;
-            transform: translateY(-3px);
+            border-radius: 50px;
+            border: 3px solid #fff;
+            box-shadow: 0 6px 0 #b31e4d, 0px 10px 20px rgba(255, 71, 126, 0.5);
+            margin-top: 20px;
+            transition: 0.1s ease;
         }
 
-        .features {
-            margin-top: 25px;
-            color: #ff99bb;
-            font-size: 15px;
+        .download-btn:active {
+            transform: translateY(4px);
+            box-shadow: 0 2px 0 #b31e4d, 0px 5px 10px rgba(255, 71, 126, 0.5);
+        }
+
+        .features p {
+            font-size: 1.1rem;
+            color: #ffccd5;
+            margin-top: 15px;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <img src="BloodChibi.png" alt="A Deadly Wave Of Love Logo" class="logo">
-        <h1>A DEADLY WAVE OF LOVE</h1>
-        <div class="subtitle">A DEADLY WAVE OF LOVE SIMULATOR 🖤</div>
-    </header>
+    <h1>A DEADLY WAVE OF LOVE</h1>
+    <h2>A DEADLY WAVE OF LOVE SIMULATOR 🖤</h2>
 
-    <div class="desc-box">
+    <div class="container">
         <p>Welcome to the official website of Kiira Taako (BloodDev). The place where sweet love withered away—a scene playing out right in the middle of the school!</p>
-        <p><b>Latest Version:</b> v0.1.45a</p>
-    </div>
+        <p><strong>Latest Version:</strong> v0.1.45a</p>
 
-    <!-- PHẦN NHÀ TẠO MOD GỌN GÀNG CÓ MẠNG XÃ HỘI BÊN TRONG -->
-    <div class="creator-box">
-        <div class="creator-top">
-            <img src="aihoi6767.png" alt="Kiira Taako Avatar" class="creator-avatar">
-            <div class="creator-info">
-                🛠️ Nhà tạo mod (Mod Creator):
-                <span>Kiira Taako (BloodDev)</span>
+        <div class="creator-box">
+            <img src="BloodChibi.png" alt="Kiira Taako">
+            <div>
+                <span style="display: block; font-size: 1.2rem; color: #ff758c;">🛠️ Nhà tạo mod (Mod Creator):</span>
+                <span style="font-size: 1.4rem;">Kiira Taako (BloodDev)</span>
             </div>
         </div>
-        
-        <!-- Mạng xã hội nằm gọn trong khung -->
+
+        <!-- Mạng xã hội -->
         <div class="social-container">
             <a href="https://www.youtube.com/@bloodandsakurachankawaii1" target="_blank" class="social-btn youtube">YouTube</a>
             <a href="https://www.tiktok.com/@bloodandsakurachankawaii" target="_blank" class="social-btn tiktok">TikTok</a>
@@ -189,13 +148,13 @@
         </div>
     </div>
 
-    <!-- Nút tải mod -->
+    <!-- Nút tải mod trỏ thẳng link tải trực tiếp Google Drive -->
     <div>
-        <a href="https://drive.google.com/uc?export=download&id=1HFMsOHnyAJkSuPpOea-Xaz8CT8IOpfWW" class="download-btn">Download Here ヾ(≧∇≦*)o</a>
+        <a href="https://drive.google.com/uc?export=download&id=1HFMsOHnyAJkSuPpOea-Xaz8CT8IOpfWW" class="download-btn">Download Here ヾ(≧▽≦*)o</a>
     </div>
 
     <div class="features">
-        <p>✨ Get ready for a wave of bloody love at school</p>
+        <p>✨ Get ready for a wave of bloody love at school!</p>
     </div>
 
 </body>
