@@ -145,7 +145,6 @@
             gap: 12px;
         }
 
-        /* Biến card thành thẻ link có hiệu ứng khi lia chuột vào */
         .sponsor-link {
             text-decoration: none;
             display: inline-block;
@@ -182,7 +181,7 @@
             text-align: left;
         }
 
-        /* Khung riêng biệt mới cho phần Mạng xã hội */
+        /* Khung Mạng xã hội */
         .social-box {
             background: rgba(40, 10, 25, 0.85);
             border: 3px solid #fff;
@@ -218,31 +217,53 @@
             box-shadow: 0 9px 0 rgba(0,0,0,0.3);
         }
 
-        /* Nút tải mod */
+        /* KHUNG TẢI XUỐNG RIÊNG BIỆT (Download Trực Tiếp) */
+        .download-box {
+            background: rgba(40, 10, 25, 0.85);
+            border: 3px solid #fff;
+            border-radius: 30px;
+            padding: 30px;
+            width: 90%;
+            max-width: 700px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .download-title {
+            font-size: 1.4rem;
+            color: #ffb3c6;
+            margin: 0;
+        }
+
+        /* Nút tải mod - Đã cập nhật đúng ID mới */
         .download-btn {
             display: inline-block;
             background: linear-gradient(135deg, #ffffff, #ffe0eb);
             color: #ff477e;
-            padding: 18px 50px;
-            font-size: 2rem;
+            padding: 15px 40px;
+            font-size: 1.8rem;
             text-decoration: none;
             border-radius: 100px;
             border: 4px solid #ff477e;
-            box-shadow: 0 10px 0 #b31e4d, 0px 20px 40px rgba(0, 0, 0, 0.3);
-            margin-top: 10px;
+            box-shadow: 0 8px 0 #b31e4d, 0px 15px 30px rgba(0, 0, 0, 0.3);
             transition: 0.1s ease;
             font-family: 'Bagel Fat One', cursive, sans-serif;
         }
 
         .download-btn:active {
             transform: translateY(6px);
-            box-shadow: 0 4px 0 #b31e4d, 0px 10px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 0 #b31e4d, 0px 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         .footer-text {
             font-size: 1.3rem;
             color: #fff;
-            margin-top: 25px;
+            margin-top: 10px;
             text-shadow: 2px 2px 0px #b31e4d;
             margin-bottom: 25px;
         }
@@ -274,14 +295,15 @@
             <div class="sponsors-title">💖 SPONSOR OF THIS VERSION 💖</div>
             <div class="sponsors-grid">
                 <!-- Nhà tài trợ 1: BloodDev -->
+                <a href="https://www.youtube.com/@bloodandsakurachankawaii1" target="_blank" class="sponsor-link">
                     <div class="sponsor-card">
                         <img src="aihoi6767.png" alt="Sponsor 1">
-                        <span class="sponsor-name">BloodDev</span>
+                        <span class="sponsor-name">Tên BloodDev</span>
                     </div>
                 </a>
 
                 <!-- Nhà tài trợ 2: Lu chơi yansim -->
-                <a href="https://www.tiktok.com/@thmatlo" target="_blank" class="sponsor-link">
+                <a href="https://www.tiktok.com/@bloodandsakurachankawaii" target="_blank" class="sponsor-link">
                     <div class="sponsor-card">
                         <img src="LuChoiYanSim.png" alt="Sponsor 2">
                         <span class="sponsor-name">Lu chơi yansim✨️😤</span>
@@ -307,16 +329,17 @@
         </div>
     </div>
 
-    <!-- KHUNG RIÊNG BIỆT CHO MẠNG XÃ HỘI -->
+    <!-- KHUNG MẠNG XÃ HỘI -->
     <div class="social-box">
         <a href="https://www.youtube.com/@bloodandsakurachankawaii1" target="_blank" class="social-btn youtube">YouTube</a>
         <a href="https://www.tiktok.com/@bloodandsakurachankawaii" target="_blank" class="social-btn tiktok">TikTok</a>
         <a href="https://discord.gg/7QEdXBGyq9" target="_blank" class="social-btn discord">Discord</a>
     </div>
 
-    <!-- Nút tải mod -->
-    <div>
-        <a href="https://drive.google.com/uc?export=download&id=1HFMsOHnyAJkSuPpOea-Xaz8CT8IOpfWW" class="download-btn">Download Here ヾ(≧▽≦*)o</a>
+    <!-- KHUNG TẢI XUỐNG RIÊNG BIỆT (Download Trực Tiếp) -->
+    <div class="download-box">
+        <p class="download-title">📥 TẢI XUỐNG BẢN MOD 📥</p>
+        <a href="https://drive.google.com/uc?export=download&id=1OBeJZSkuNqj6Szh-NACyla5k81IQ6x9T" class="download-btn">Download Here ヾ(≧▽≦*)o</a>
     </div>
 
     <p class="footer-text">✨ Get ready for a wave of bloody love at school!</p>
