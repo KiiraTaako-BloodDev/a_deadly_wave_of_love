@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A DEADLY WAVE OF LOVE - MOD</title>
     
-    <!-- Favicon tab trình duyệt dùng BloodLogo.png -->
-    <link rel="icon" type="image/png" href="BloodLogo.png">
+    <!-- Favicon tab trình duyệt dùng BloodChibi.png -->
+    <link rel="icon" type="image/png" href="BloodChibi.png">
 
     <!-- Nhúng phông chữ DFVN Bagel Fat One từ kho dự án -->
     <style>
@@ -35,15 +35,16 @@
             overflow-x: hidden;
         }
 
-        /* Style cho logo hiển thị trên đầu trang web nếu muốn */
+        /* Logo chính hiện ở đầu trang */
         .top-logo {
-            width: 450px;
-            height: 450px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             border: 4px solid #fff;
             object-fit: cover;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
             margin-bottom: 10px;
+            margin-top: 20px;
         }
 
         h1 {
@@ -123,11 +124,56 @@
             font-weight: normal;
         }
 
+        /* Phần nhà tài trợ (Sponsors) */
+        .sponsors-section {
+            margin-top: 30px;
+            border-top: 2px dashed rgba(255, 179, 198, 0.4);
+            padding-top: 25px;
+        }
+
+        .sponsors-title {
+            font-size: 1.5rem;
+            color: #ffb3c6;
+            margin-bottom: 15px;
+        }
+
+        .sponsors-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .sponsor-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid #ff758c;
+            border-radius: 15px;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 150px;
+        }
+
+        .sponsor-card img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ffb3c6;
+        }
+
+        .sponsor-name {
+            font-size: 1.1rem;
+            color: #fff;
+            text-align: left;
+        }
+
         .social-container {
             display: flex;
             justify-content: center;
             gap: 20px;
-            margin-top: 30px;
+            margin-top: 25px;
         }
 
         .social-btn {
@@ -160,7 +206,7 @@
             border-radius: 100px;
             border: 4px solid #ff477e;
             box-shadow: 0 10px 0 #b31e4d, 0px 20px 40px rgba(0, 0, 0, 0.3);
-            margin-top: 20px;
+            margin-top: 10px;
             transition: 0.1s ease;
             font-family: 'Bagel Fat One', cursive, sans-serif;
         }
@@ -173,15 +219,15 @@
         .footer-text {
             font-size: 1.4rem;
             color: #fff;
-            margin-top: 30px;
+            margin-top: 25px;
             text-shadow: 2px 2px 0px #b31e4d;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Logo chính hiện ở đầu trang -->
+    <!-- Logo chính ở đầu trang đã là BloodChibi.png -->
     <img src="BloodChibi.png" alt="Blood Logo" class="top-logo">
 
     <h1>A DEADLY WAVE OF LOVE</h1>
@@ -192,11 +238,27 @@
         <p class="version"><strong>Latest Version:</strong> v0.1.45a</p>
 
         <div class="creator-box">
-            <!-- Ảnh chỗ nhà tạo mod đã được đổi thành aihoi6767.png -->
             <img src="aihoi6767.png" alt="Kiira Taako">
             <div class="creator-text-area">
                 <span class="creator-label">🛠️ Nhà tạo mod (Mod Creator):</span>
                 <span class="creator-name">Kiira Taako (BloodDev)</span>
+            </div>
+        </div>
+
+        <!-- (Sponsors) -->
+        <div class="sponsors-section">
+            <div class="sponsors-title">💖  (sponsors of this version) 💖</div>
+            <div class="sponsors-grid">
+                <!-- Nhà tài trợ 1 -->
+                <div class="sponsor-card">
+                    <img src="aihoi6767.png" alt="Sponsor 1">
+                    <span class="sponsor-name">Tên BloodDev</span>
+                </div>
+                <!-- Nhà tài trợ 2 (M muốn thêm bao nhiêu thì copy thêm thẻ sponsor-card này nhé) -->
+                <div class="sponsor-card">
+                    <img src="BloodChibi.png" alt="Sponsor 2">
+                    <span class="sponsor-name">Tên Sponsor 2</span>
+                </div>
             </div>
         </div>
 
@@ -210,7 +272,7 @@
 
     <!-- Nút tải mod -->
     <div>
-        <a href="https://drive.usercontent.google.com/download?id=1HFMsOHnyAJkSuPpOea-Xaz8CT8IOpfWW&export=download&authuser=0" class="download-btn">Download Here ヾ(≧▽≦*)o</a>
+        <a href="https://drive.google.com/uc?export=download&id=1HFMsOHnyAJkSuPpOea-Xaz8CT8IOpfWW" class="download-btn">Download Here ヾ(≧▽≦*)o</a>
     </div>
 
     <p class="footer-text">✨ Get ready for a wave of bloody love at school!</p>
