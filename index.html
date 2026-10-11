@@ -217,7 +217,7 @@
             box-shadow: 0 9px 0 rgba(0,0,0,0.3);
         }
 
-        /* KHUNG TẢI XUỐNG RIÊNG BIỆT (Tải trực tiếp cực mượt) */
+        /* KHUNG TẢI XUỐNG CHÍNH */
         .download-box {
             background: rgba(40, 10, 25, 0.85);
             border: 3px solid #fff;
@@ -240,7 +240,7 @@
             margin: 0;
         }
 
-        /* Nút tải mod - Dùng direct link chuẩn */
+        /* Nút Download Here duy nhất */
         .download-btn {
             display: inline-block;
             background: linear-gradient(135deg, #ffffff, #ffe0eb);
@@ -253,11 +253,136 @@
             box-shadow: 0 8px 0 #b31e4d, 0px 15px 30px rgba(0, 0, 0, 0.3);
             transition: 0.1s ease;
             font-family: 'Bagel Fat One', cursive, sans-serif;
+            cursor: pointer;
         }
 
         .download-btn:active {
             transform: translateY(6px);
             box-shadow: 0 2px 0 #b31e4d, 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Dòng thông báo đếm ngược bên dưới */
+        .countdown-notice {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: #ffb3c6;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 10px 20px;
+            border-radius: 15px;
+            border: 1px dashed #ff758c;
+        }
+
+        .countdown-time {
+            color: #fff;
+            font-weight: bold;
+            background: #ff477e;
+            padding: 3px 10px;
+            border-radius: 8px;
+            margin-left: 5px;
+        }
+
+        /* BẢNG PHIÊN BẢN (MODAL POPUP) */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(20, 5, 10, 0.85);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .modal-card {
+            background: rgba(40, 10, 25, 0.95);
+            border: 4px solid #ff477e;
+            border-radius: 35px;
+            padding: 30px;
+            max-width: 650px;
+            width: 100%;
+            box-shadow: 0 0 40px rgba(255, 71, 126, 0.6);
+            position: relative;
+            text-align: center;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2rem;
+            color: #ffb3c6;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .close-btn:hover {
+            color: #fff;
+            transform: scale(1.2);
+        }
+
+        .modal-title {
+            font-size: 1.8rem;
+            color: #ffb3c6;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 0px #b31e4d;
+        }
+
+        /* 3 Ô VUÔNG CHỨA PHIÊN BẢN */
+        .version-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .version-box {
+            background: rgba(255, 255, 255, 0.08);
+            border: 3px solid #ff758c;
+            border-radius: 20px;
+            padding: 20px 15px;
+            width: 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .version-box:hover {
+            transform: translateY(-5px);
+            border-color: #fff;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .version-box-title {
+            font-size: 1.2rem;
+            color: #fff;
+            text-shadow: 1px 1px 0px #b31e4d;
+        }
+
+        .version-box-btn {
+            display: inline-block;
+            width: 100%;
+            padding: 10px 0;
+            background: linear-gradient(135deg, #ff758c, #ff477e);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            border: 2px solid #fff;
+            box-shadow: 0 4px 0 #b31e4d;
+            box-sizing: border-box;
+        }
+
+        .version-box-btn:active {
+            transform: translateY(2px);
+            box-shadow: 0 1px 0 #b31e4d;
         }
 
         .footer-text {
@@ -290,11 +415,10 @@
             </div>
         </div>
 
-        <!-- PHẦN NHÀ TÀI TRỢ (Sponsors) - Có gắn link -->
+        <!-- PHẦN NHÀ TÀI TRỢ (Sponsors) -->
         <div class="sponsors-section">
             <div class="sponsors-title">💖 SPONSOR OF THIS VERSION 💖</div>
             <div class="sponsors-grid">
-                <!-- Nhà tài trợ 1: BloodDev -->
                 <a href="https://www.youtube.com/@bloodandsakurachankawaii1" target="_blank" class="sponsor-link">
                     <div class="sponsor-card">
                         <img src="aihoi6767.png" alt="Sponsor 1">
@@ -302,15 +426,13 @@
                     </div>
                 </a>
 
-                <!-- Nhà tài trợ 2: Lu chơi yansim -->
-                <a href="https://www.tiktok.com/@thmatlo" target="_blank" class="sponsor-link">
+                <a href="https://www.tiktok.com/@bloodandsakurachankawaii" target="_blank" class="sponsor-link">
                     <div class="sponsor-card">
                         <img src="LuChoiYanSim.png" alt="Sponsor 2">
                         <span class="sponsor-name">Lu chơi yansim✨️😤</span>
                     </div>
                 </a>
 
-                <!-- Nhà tài trợ 3: Google Gemini Việt Nam -->
                 <a href="https://gemini.google.com" target="_blank" class="sponsor-link">
                     <div class="sponsor-card">
                         <img src="Gemini.png" alt="Sponsor 3">
@@ -318,13 +440,12 @@
                     </div>
                 </a>
 
-                <!-- Nhà tài trợ 4: Sketchfab Model -->
                 <a href="https://sketchfab.com" target="_blank" class="sponsor-link">
                     <div class="sponsor-card">
                         <img src="logonew.png" alt="Sponsor 4">
                         <span class="sponsor-name">Model found on Sketchfab</span>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -336,13 +457,95 @@
         <a href="https://discord.gg/7QEdXBGyq9" target="_blank" class="social-btn discord">Discord</a>
     </div>
 
-    <!-- KHUNG TẢI XUỐNG RIÊNG BIỆT (Tải trực tiếp) -->
+    <!-- KHUNG TẢI XUỐNG -->
     <div class="download-box">
         <p class="download-title">📥 TẢI XUỐNG BẢN MOD 📥</p>
-        <a href="https://download1349.mediafire.com/cmqhmhq2s2ogSrP1DLdF_aBWxxM-s_GBPsCOrudi4u92feraK8VzKk8WAhVrBBOlCHDr04rIJtxw0b4NZft6LqkThNbRLlObnk1KjallvxpO9Ldk0eoZbMNOB05_tNvktFF0wu8qy0cP031ncEjNIZ-MrXRHohU5NcZ_xmRglCQ4Cas/bl2ysaf7r6r495h/Mod+By+Sakura-chan+kawaii%282%29.zip" class="download-btn">Download Here ヾ(≧▽≦*)o</a>
+        
+        <!-- Nút Download Here bấm vào để mở bảng -->
+        <a id="main-download-btn" class="download-btn" onclick="handleDownloadClick()">Download Here ヾ(≧▽≦*)o</a>
+
+        <!-- Dòng đếm ngược trước 9h30 sáng -->
+        <div id="update-notice" class="countdown-notice">
+            ⏳ Bản cập nhật sẽ đến sau: <span id="timer" class="countdown-time">00:00:00</span>
+        </div>
+    </div>
+
+    <!-- BẢNG CÁC PHIÊN BẢN (POPUP BẤM VÀO SẼ HIỆN 3 Ô VUÔNG TẢI TRỰC TIẾP) -->
+    <div id="version-modal" class="modal-overlay">
+        <div class="modal-card">
+            <span class="close-btn" onclick="closeModal()">✕</span>
+            <div class="modal-title">✨ CHỌN PHIÊN BẢN BẠN MUỐN TẢI ✨</div>
+            
+            <div class="version-grid">
+                <!-- Ô vuông 1: v0.1.45a -->
+                <div class="version-box">
+                    <div class="version-box-title">📦 v0.1.45a</div>
+                    <a href="https://download1349.mediafire.com/yrsmhrcfnvzgXRDKqjDo9Kz7aeHVfeKs-4tzaDSgyopBF58MZUvgJFamOzQAkHaDudrqd8kO4fx01NoG3KBhjU4KXtmj-HbRQB_65UfE0ZfXMJi5Ou8vLrPq0WCiBHkcqZ_p6TcM7_hXoO1wUyk83bDWIYkNJ4hInTQw_4ls3ogT0Vo/bl2ysaf7r6r495h/Mod+By+Sakura-chan+kawaii%282%29.zip" class="version-box-btn">Tải về</a>
+                </div>
+
+                <!-- Ô vuông 2: v0.1.47 beta -->
+                <div class="version-box">
+                    <div class="version-box-title">🚀 v0.1.47 beta</div>
+                    <a href="DÁN_LINK_MEDIAFIRE_0.1.47_BETA_VÀO_ĐÂY" class="version-box-btn">Tải về</a>
+                </div>
+
+                <!-- Ô vuông 3: v0.1.47 beta Tiếng Việt -->
+                <div class="version-box">
+                    <div class="version-box-title">🇻🇳 Tiếng Việt</div>
+                    <a href="DÁN_LINK_MEDIAFIRE_0.1.47_VIETNAM_VÀO_ĐÂY" class="version-box-btn">Tải về</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <p class="footer-text">✨ Get ready for a wave of bloody love at school!</p>
+
+    <!-- SCRIPT XỬ LÝ -->
+    <script>
+        let isAfter930 = false;
+
+        function updateTimer() {
+            const now = new Date();
+            const targetTime = new Date();
+            targetTime.setHours(9, 30, 0, 0);
+
+            const diff = targetTime - now;
+
+            if (diff <= 0) {
+                isAfter930 = true;
+                document.getElementById('update-notice').style.display = 'none';
+            } else {
+                isAfter930 = false;
+                const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                const minutes = Math.floor((diff / 1000 / 60) % 60);
+                const seconds = Math.floor((diff / 1000) % 60);
+
+                const formatted = 
+                    String(hours).padStart(2, '0') + ":" + 
+                    String(minutes).padStart(2, '0') + ":" + 
+                    String(seconds).padStart(2, '0');
+
+                document.getElementById('timer').innerText = formatted;
+            }
+        }
+
+        function handleDownloadClick() {
+            if (isAfter930) {
+                // Sau 9h30: Hiện bảng popup chứa 3 ô vuông tải trực tiếp
+                document.getElementById('version-modal').style.display = 'flex';
+            } else {
+                // Trước 9h30: Bấm vào tải trực tiếp bản v0.1.45a cũ
+                window.location.href = "https://download1349.mediafire.com/yrsmhrcfnvzgXRDKqjDo9Kz7aeHVfeKs-4tzaDSgyopBF58MZUvgJFamOzQAkHaDudrqd8kO4fx01NoG3KBhjU4KXtmj-HbRQB_65UfE0ZfXMJi5Ou8vLrPq0WCiBHkcqZ_p6TcM7_hXoO1wUyk83bDWIYkNJ4hInTQw_4ls3ogT0Vo/bl2ysaf7r6r495h/Mod+By+Sakura-chan+kawaii%282%29.zip";
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('version-modal').style.display = 'none';
+        }
+
+        setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
 
 </body>
 </html>
